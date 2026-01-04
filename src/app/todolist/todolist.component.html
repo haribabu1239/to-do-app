@@ -1,0 +1,9 @@
+<h3 class="text-center text-white bg-info mt-5 p-0">Task List</h3>
+<div class="d-flex justify-content-center">
+  <ul class="list-group w-50">
+        <li *ngFor="let todo of todoService.todoList" class="list-group-item d-flex justify-content-between align-items-center">
+      <span>{{ todo.task }}</span>
+      <button class="btn btn-danger btn-sm" (click)="removeElement(todo.id)">&#215;</button>
+    </li>
+  </ul>
+</div>
